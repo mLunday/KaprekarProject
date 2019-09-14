@@ -1,5 +1,5 @@
 #include<math.h>
-#include<stdlib>
+#include<stdlib.h>
 #include <stdio.h>
 #include "kaprekarUtils.h"
 
@@ -26,14 +26,14 @@
 int isKaprekar(int n);
 
 int main(int argc, char **argv) {
-  int m;
+  int m, x;
   printf("please enter a number to check if it is a kaprekar.\n");
   scanf ("%d", &m);
-  n = isKaprekar (m);
+  x = isKaprekar (m);
   if(!isKaprekar){
-    printf("The number %lf is not a kaprekar number.", n );
+    printf("The number %lf is not a kaprekar number.", m );
   } else if (isKaprekar){
-    printf("The number %lf is a kaprekar number.", n );
+    printf("The number %lf is a kaprekar number.", m );
   }
 }
 
