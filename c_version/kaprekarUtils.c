@@ -37,10 +37,10 @@ int main(int argc, char **argv) {
   } else if (!isKaprekar){
     printf("The number %d is not a kaprekar number.", m );
   }
+  return 0;
 }
 
 int isKaprekar (int n) {
-  int n = 45;
 
   if(n < 1) {
     return 0;
