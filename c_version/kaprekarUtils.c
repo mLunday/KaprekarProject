@@ -31,10 +31,10 @@ int main(int argc, char **argv) {
   scanf ("%d", &m);
 
   x = isKaprekar (m);
-  if(isKaprekar){
+  if(isKaprekar(m)){
     printf("The number %d is a kaprekar number.", m );
 
-  } else if (!isKaprekar){
+  } else if (!isKaprekar(m)){
     printf("The number %d is not a kaprekar number.", m );
   }
   return 0;
@@ -54,7 +54,7 @@ int isKaprekar (int n) {
   long modulus = 1;
   long first, second;
 
-  printf("%d, %li\n", numDigits, square);
+  //printf("%d, %li\n", numDigits, square);
 
   //for each possible "split" of the square...
   for(i=1; i<=numDigits; i++) {
@@ -72,7 +72,7 @@ int isKaprekar (int n) {
       return 1;
     }
   }// for loop
-  printf("%li, %li", first, second);
+  //printf("%li, %li", first, second);
   return 0;
 
 }
