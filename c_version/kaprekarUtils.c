@@ -29,11 +29,12 @@ int main(int argc, char **argv) {
   int m, x;
   printf("please enter a number to check if it is a kaprekar.\n");
   scanf ("%d", &m);
+
   x = isKaprekar (m);
   if(!isKaprekar){
-    printf("The number %lf is not a kaprekar number.", m );
+    printf("The number %d is not a kaprekar number.", m );
   } else if (isKaprekar){
-    printf("The number %lf is a kaprekar number.", m );
+    printf("The number %d is a kaprekar number.", m );
   }
 }
 
