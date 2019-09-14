@@ -31,14 +31,17 @@ int main(int argc, char **argv) {
   scanf ("%d", &m);
 
   x = isKaprekar (m);
-  if(!isKaprekar){
-    printf("The number %d is not a kaprekar number.", m );
-  } else if (isKaprekar){
+  if(isKaprekar){
     printf("The number %d is a kaprekar number.", m );
+
+  } else if (!isKaprekar){
+    printf("The number %d is not a kaprekar number.", m );
   }
 }
 
 int isKaprekar (int n) {
+  int n = 45;
+
   if(n < 1) {
     return 0;
   }
@@ -50,6 +53,8 @@ int isKaprekar (int n) {
   int numDigits = (int) log10(square) + 1;
   long modulus = 1;
   long first, second;
+
+  printf("%d, %li\n", numDigits, square);
 
   //for each possible "split" of the square...
   for(i=1; i<=numDigits; i++) {
@@ -65,9 +70,9 @@ int isKaprekar (int n) {
     //the sum of the two parts is equal to n, then it is
     if(second > 0 && n == first + second) {
       return 1;
-    } else {
-      return 0;
     }
-  } //for loop
+  }// for loop
+  printf("%li, %li", first, second);
+  return 0;
 
 }
