@@ -1,5 +1,6 @@
 #include<math.h>
-
+#include<stdlib>
+#include <stdio.h>
 #include "kaprekarUtils.h"
 
 /**
@@ -22,10 +23,21 @@
  * @return <code>true</code> if <code>n</code> is a Kaprekar Number,
  * <code>false</code> otherwise.
  */
-int isKaprekar(int n); 
+int isKaprekar(int n);
 
 int main(int argc, char **argv) {
+  int m;
+  printf("please enter a number to check if it is a kaprekar.\n");
+  scanf ("%d", &m);
+  n = isKaprekar (m);
+  if(!isKaprekar){
+    printf("The number %lf is not a kaprekar number.", n );
+  } else if (isKaprekar){
+    printf("The number %lf is a kaprekar number.", n );
+  }
+}
 
+int isKaprekar (int n) {
   if(n < 1) {
     return 0;
   }
@@ -55,7 +67,6 @@ int main(int argc, char **argv) {
     } else {
       return 0;
     }
-  }
-  //return 0;
+  } //for loop
 
 }
